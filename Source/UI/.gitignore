@@ -1,0 +1,5 @@
+node_modules
+public/segmenation-1.nii
+public/volume-1.nii
+package-lock.json
+
