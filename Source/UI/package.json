@@ -13,6 +13,7 @@
     "cornerstone-tools": "^6.0.10",
     "cra-template": "1.2.0",
     "framer-motion": "^11.15.0",
+    "lucide-react": "^0.475.0",
     "nifti-js": "^1.0.1",
     "nifti-reader-js": "^0.6.8",
     "react": "^19.0.0",
