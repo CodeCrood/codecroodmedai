@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SignUp } from "@clerk/clerk-react";
-import Layout from "./components/Layout"; // Using Layout instead of Sidebar
-import HomePage from "./components/HomePage";
-import UploadImage from "./components/UploadImage";
-import ShowImages from "./components/ShowImages";
-import PieChart from "./components/PieChart";
-import AboutPage from "./components/AboutPage";
+import Layout from "./Layouts/DashboardLayout"; // Using Layout instead of Sidebar
+import HomePage from "./pages/HomePage";
+import UploadImage from "./pages/UploadImage";
+import ShowImages from "./pages/ShowImages";
+import PieChart from "./pages/PieChart";
+import AboutPage from "./pages/AboutPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-import HelpScreen from "./components/Help";
+import HelpScreen from "./pages/Help";
 import Header from "./components/Header";
 import BioDigitalEmbed from "./3dmodel/BioDigitalEmbed";
 import LoginModal from "./components/CardModal";
@@ -26,7 +26,8 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-
+            <Route path="/help" element={<HelpScreen />} />{" "}
+            {/* Moved inside Layout */}
             {/* Protected Routes */}
             <Route
               path="/workspace/upload"
@@ -52,7 +53,6 @@ function App() {
 
           {/* Routes outside Layout */}
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/help" element={<HelpScreen />} />
         </Routes>
       </div>
     </Router>

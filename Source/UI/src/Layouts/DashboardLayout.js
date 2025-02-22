@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Sidebar from "./Sidebar";
+import Sidebar from "../components/Sidebar";
 import { Menu, HelpCircle } from "lucide-react";
 
 export default function Layout() {
@@ -23,7 +23,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="flex h-screen w-screen bg-gray-100">
+    <div className="flex h-screen w-screen bg-blue-200">
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
@@ -33,24 +33,9 @@ export default function Layout() {
           isSidebarOpen ? "ml-64 md:ml-64" : "ml-20 md:ml-20"
         }`}
       >
-        {/* Layout Header */}
-        <header className="flex items-center justify-between bg-white shadow px-4 py-2 sticky top-0 z-30">
-          {/* Sidebar Toggle */}
-          <button onClick={toggleSidebar} className="text-gray-700 md:hidden">
-            <Menu size={24} />
-          </button>
-
-          {/* Breadcrumb Path */}
-          <div className="text-gray-600 font-medium">{generateBreadcrumb()}</div>
-
-          {/* Help Icon */}
-          <button className="text-gray-700">
-            <HelpCircle size={24} />
-          </button>
-        </header>
 
         {/* Page Content */}
-        <main className="p-6 overflow-y-auto h-[calc(100vh-4rem)]">
+        <main className=" py-16 overflow-y-auto h-[calc(120vh-4rem)]">
           <Outlet />
         </main>
       </div>
