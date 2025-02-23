@@ -31,7 +31,7 @@ function HelpScreen() {
     <div className="text-center p-6 min-h-screen bg-cover bg-center bg-gray-50 relative">
       {/* Header */}
       <h1 className="text-4xl font-extrabold mb-6 animate-pulse text-gray-800 hover:text-blue-600 transition-all duration-300 ease-in-out">
-        Help & Support
+        Help <span className="text-teal-400">&</span> Support
       </h1>
       <p className="mt-2 text-gray-800 mb-10 text-lg">
         Find answers to your questions or get help with using the app.
@@ -73,7 +73,7 @@ function HelpScreen() {
 
       {/* Chatbot Floating Button */}
       <button
-        className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
+        className="fixed bottom-6 right-6 bg-teal-400 hover:bg-teal-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
         onClick={() => setIsChatbotOpen(true)}
       >
         <MessageCircle className="w-6 h-6" />

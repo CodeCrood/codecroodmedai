@@ -36,7 +36,7 @@ function AboutPage() {
       <h2
         className="text-3xl font-extrabold text-gray-800 mb-4 text-center animate-pulse hover:text-blue-600 transition-all duration-300 ease-in-out"
       >
-        Supervisor and Committee Members
+        Supervisor <span className="text-teal-400">&</span>  Committee Members
       </h2>
 
 

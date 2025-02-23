@@ -12,7 +12,7 @@ import QuickStats from "../components/QuickStats";
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 flex flex-col items-center justify-center p-8">
+    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 flex flex-col p-8">
       {/* Hero Section */}
       <section className="text-center mb-12">
         <h1 className="text-5xl font-extrabold text-gray-800 mb-4 animate-fadeInUp">
@@ -32,7 +32,7 @@ function HomePage() {
       </div>
 
       {/* Instructions Section */}
-      <p className="text-gray-800 text-lg mb-8">Follow the steps below to get started:</p>
+      <p className="text-gray-800 text-lg mb-8 text-center">Follow the steps below to get started:</p>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {/* Instruction Cards */}

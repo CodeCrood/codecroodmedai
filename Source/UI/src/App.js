@@ -18,7 +18,7 @@ function App() {
     <Router>
       <div className="bg-gray-50 min-h-screen">
         {/* Header */}
-        <Header />
+        {/* <Header /> */}
 
         {/* Main Layout with Sidebar inside */}
         <Routes>

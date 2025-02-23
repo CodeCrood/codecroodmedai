@@ -111,7 +111,9 @@ function UploadImage() {
 
   return (
     <div className="min-h-screen p-6 bg-gray-50">
-      <h2 className="text-3xl font-extrabold text-gray-800 text-center animate-pulse">Upload Image & Patient Details</h2>
+      <h2 className="text-3xl font-extrabold text-gray-800 mb-4 text-center animate-pulse hover:text-blue-600 transition-all duration-300 ease-in-out">
+          Patient details <span className="text-teal-400">&</span> Upload Image
+        </h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {/* Patient Information Panel */}
         <div className="p-6 bg-white shadow-lg rounded-2xl">

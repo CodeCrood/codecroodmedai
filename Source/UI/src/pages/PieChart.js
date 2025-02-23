@@ -39,7 +39,7 @@ function PieChart() {
     <div className="w-full min-h-screen p-6 bg-gray-50  ">
       <div className="flex justify-center">
       <h2 className="text-3xl font-extrabold text-gray-800 mb-4 text-center animate-pulse hover:text-blue-600 transition-all duration-300 ease-in-out">
-      Liver vs Tumor Area</h2>
+      Liver <span className="text-teal-400">vs</span>  Tumor Area</h2>
       </div>
 
       {/* Text to show current values and make them editable */}
