@@ -21,45 +21,45 @@ function HomePage() {
         <p className="text-xl text-gray-700 mb-6 animate-fadeInUp delay-200">
           AI-driven workspace for accurate liver tumor detection.
         </p>
-        <Link to="/workspace/upload" className="px-6 py-3 bg-teal-400 text-white rounded-full hover:bg-teal-600 transition shadow-lg animate-fadeInUp delay-300">
-          Get Started
+        <Link to="/liver-service/upload" className="px-6 py-3 bg-teal-400 text-white rounded-full hover:bg-teal-600 transition shadow-lg animate-fadeInUp delay-300">
+          Lets Analyze
         </Link>
       </section>
 
       {/* Quick Stats Section */}
-      <div className="w-full max-w-6xl mb-12 animate-fadeInUp delay-500">
+      <div className="w-full max-w-6xl mb-12 animate-fadeInUp delay-500 flex justify-center self-center">
         <QuickStats />
       </div>
 
       {/* Instructions Section */}
       <p className="text-gray-800 text-lg mb-8 text-center">Follow the steps below to get started:</p>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl flex justify-center self-center">
         {/* Instruction Cards */}
         {[
           {
             icon: <Upload className="text-blue-500 w-12 h-12 mb-4 mx-auto" />, 
             title: "Upload Image",
             desc: "Upload CT scans for analysis.",
-            link: "/workspace/upload"
+            link: "/liver-service/upload"
           },
           {
             icon: <Eye className="text-green-500 w-12 h-12 mb-4 mx-auto" />,
             title: "View Segmentation",
             desc: "See the original CT scan with segmented tumors.",
-            link: "/workspace/show"
+            link: "/liver-service/show"
           },
           {
             icon: <PieChart className="text-purple-500 w-12 h-12 mb-4 mx-auto" />,
             title: "Data Visualization",
             desc: "Analyze tumor and liver proportions.",
-            link: "/workspace/pie"
+            link: "/liver-service/pie"
           },
           {
             icon: <HeartPulse className="text-red-500 w-12 h-12 mb-4 mx-auto" />,
             title: "Liver Cancer Anatomy",
             desc: "Explore 3D models of liver cancer progression.",
-            link: "/workspace/anatomy"
+            link: "/liver-service/anatomy"
           },
           {
             icon: <Users className="text-teal-500 w-12 h-12 mb-4 mx-auto" />,

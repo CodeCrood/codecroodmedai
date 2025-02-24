@@ -10,6 +10,7 @@ import {
   X,
   Skull,
   HelpCircle,
+  LayoutDashboardIcon,
 } from "lucide-react";
 
 export default function Sidebar({ isOpen, setIsOpen }) {
@@ -26,7 +27,10 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       }`}
     >
       {/* Toggle Button */}
-      <button onClick={toggleSidebar} className="mb-6 pl-2 text-gray-600 hover:text-blue-600 transition-colors">
+      <button
+        onClick={toggleSidebar}
+        className="mb-6 pl-3 text-gray-600 hover:text-teal-700 transition-colors"
+      >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
@@ -34,18 +38,41 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       <nav className="flex flex-col space-y-4">
         {[
           { path: "/", label: "Home", icon: <Home size={24} /> },
-          { path: "/workspace/upload", label: "Upload Image", icon: <Upload size={24} /> },
-          { path: "/workspace/show", label: "View Segmentation", icon: <Image size={24} /> },
-          { path: "/workspace/pie", label: "Pie Chart", icon: <PieChart size={24} /> },
-          { path: "/workspace/anatomy", label: "Human Anatomy", icon: <Skull size={24} /> },
+          { path: "/dashboard", label: "Dashboard", icon: <LayoutDashboardIcon size={24} /> },
+          {
+            path: "/liver-service/upload",
+            label: "Upload Image",
+            icon: <Upload size={24} />,
+          },
+          {
+            path: "/liver-service/show",
+            label: "View Segmentation",
+            icon: <Image size={24} />,
+          },
+          {
+            path: "/liver-service/pie",
+            label: "Pie Chart",
+            icon: <PieChart size={24} />,
+          },
+          {
+            path: "/liver-service/anatomy",
+            label: "Human Anatomy",
+            icon: <Skull size={24} />,
+          },
           { path: "/about", label: "Team", icon: <Users size={24} /> },
-          { path: "/help", label: "Help & Support", icon: <HelpCircle size={24} /> },
+          {
+            path: "/help",
+            label: "Help & Support",
+            icon: <HelpCircle size={24} />,
+          },
         ].map(({ path, label, icon }) => (
           <Link
             key={path}
             to={path}
             className={`flex items-center space-x-3 text-gray-700 hover:bg-blue-100 hover:text-teal-700 p-3 rounded-lg transition-all duration-300 shadow-sm ${
-              location.pathname === path ? "bg-blue-50 border-l-4 border-teal-500" : ""
+              location.pathname === path
+                ? "bg-blue-50 border-l-4 border-teal-500"
+                : ""
             }`}
           >
             {icon}

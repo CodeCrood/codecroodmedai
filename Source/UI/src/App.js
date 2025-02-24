@@ -12,6 +12,7 @@ import HelpScreen from "./pages/Help";
 import Header from "./components/Header";
 import BioDigitalEmbed from "./3dmodel/BioDigitalEmbed";
 import LoginModal from "./components/CardModal";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
@@ -22,31 +23,32 @@ function App() {
 
         {/* Main Layout with Sidebar inside */}
         <Routes>
+          <Route path="/" element={<LandingPage/>}/>
           {/* Public Routes inside Layout */}
           <Route element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/dashboard" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/help" element={<HelpScreen />} />{" "}
             {/* Moved inside Layout */}
             {/* Protected Routes */}
             <Route
-              path="/workspace/upload"
+              path="/liver-service/upload"
               element={<ProtectedRoute element={<UploadImage />} />}
             />
             <Route
-              path="/workspace/show"
+              path="/liver-service/show"
               element={<ProtectedRoute element={<ShowImages />} />}
             />
             <Route
-              path="/workspace/pie"
+              path="/liver-service/pie"
               element={<ProtectedRoute element={<PieChart />} />}
             />
             <Route
-              path="/workspace/anatomy"
+              path="/liver-service/anatomy"
               element={<ProtectedRoute element={<BioDigitalEmbed />} />}
             />
             <Route
-              path="/workspace/login"
+              path="/liver-service/login"
               element={<ProtectedRoute element={<LoginModal />} />}
             />
           </Route>
