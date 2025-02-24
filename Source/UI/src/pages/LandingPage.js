@@ -263,7 +263,7 @@ export default function LandingPage() {
       {/* Forums Section */}
       <section id="forums" className="py-20 px-10 bg-white text-center">
         <h2 className="text-4xl font-bold text-teal-700 mb-6">
-          Join the Community Forum
+          Join the Community
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Connect with researchers, professionals, and enthusiasts to discuss
